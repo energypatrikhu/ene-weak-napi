@@ -16,13 +16,13 @@
 	"main": "lib/weak.js",
 	"scripts": {
 		"test": "nyc mocha --expose-gc",
-		"install": "node-gyp rebuild",
+		"install": "ene-node-gyp-build",
 		"prebuild": "prebuildify --napi --tag-armv --tag-uv",
 		"prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '5' ] || (echo 'Some prebuilds are missing'; exit 1))"
 	},
 	"dependencies": {
+		"ene-node-gyp-build": "github:energypatrikhu/ene-node-gyp-build",
 		"node-addon-api": "^7.0.0",
-		"node-gyp": "^9.4.0",
 		"setimmediate-napi": "^1.0.3"
 	},
 	"devDependencies": {
