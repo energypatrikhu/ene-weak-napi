@@ -16,6 +16,6 @@ npm-debug.log
 .nyc_output/
 coverage
 build
-ene-node-addon-api
+node-addon-api
 
 prebuilds/
