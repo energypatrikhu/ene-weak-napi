@@ -21,8 +21,8 @@
 		"prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '5' ] || (echo 'Some prebuilds are missing'; exit 1))"
 	},
 	"dependencies": {
+		"ene-node-addon-api": "github:energypatrikhu/ene-node-addon-api",
 		"ene-node-gyp-build": "github:energypatrikhu/ene-node-gyp-build",
-		"node-addon-api": "^3.0.0",
 		"setimmediate-napi": "^1.0.3"
 	},
 	"devDependencies": {
