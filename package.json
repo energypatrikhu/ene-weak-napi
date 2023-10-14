@@ -1,0 +1,34 @@
+{
+	"name": "ene-weak-napi",
+	"license": "MIT",
+	"description": "Make weak references to JavaScript Objects.",
+	"keywords": [
+		"weak",
+		"reference",
+		"js",
+		"javascript",
+		"object",
+		"function",
+		"callback",
+		"napi"
+	],
+	"version": "2.0.2.1",
+	"main": "lib/weak.js",
+	"scripts": {
+		"test": "nyc mocha --expose-gc",
+		"install": "ene-node-gyp-build",
+		"prebuild": "prebuildify --napi --tag-armv --tag-uv",
+		"prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '5' ] || (echo 'Some prebuilds are missing'; exit 1))"
+	},
+	"dependencies": {
+		"ene-node-gyp-build": "github:energypatrikhu/ene-node-gyp-build",
+		"node-addon-api": "^3.0.0",
+		"setimmediate-napi": "^1.0.3"
+	},
+	"devDependencies": {
+		"mocha": "^7.1.1",
+		"nyc": "^15.0.0",
+		"prebuildify": "^3.0.4",
+		"prebuildify-ci": "^1.0.5"
+	}
+}
